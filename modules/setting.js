@@ -38,8 +38,8 @@ router.use((req,res,next)=>{
     next();
 });
 router.use(require('cors')({
-    origin:`https://localhost:${process.env.PORT}`,
-    methods:['get','post'],
+    origin:`https://localhost:${process.env.ALLOW_PORT}`,
+    methods:['get','post','put','delete','patch'],
     allowedHeaders:['Content-Type'],
     exposedHeaders:['Content-Type'],
     credentials:true,
